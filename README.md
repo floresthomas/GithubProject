@@ -32,8 +32,8 @@ Este comando muestra el estado actual del repositorio, proporcionando una visió
 1. **Clonar el repositorio:**
 
     ```sh
-    git clone https://github.com/floresthomas/GitSimulationProject.git
-    cd GitSimulationProject
+    git clone https://github.com/floresthomas/GithubProject.git
+    cd GithubProject
     ```
 
 2. **Construir y ejecutar la aplicación:**
