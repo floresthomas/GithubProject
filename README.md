@@ -67,16 +67,15 @@ Para ejecutar los tests, sigue estos pasos:
 
 **Instalar los paquetes necesarios:**
 ```sh
-Copiar código
 dotnet add package xunit
 dotnet add package xunit.runner.visualstudio
 dotnet add package Microsoft.NET.Test.Sdk
 ```
 
 **Ejecutar los tests:**
-    ```sh
-    cd TestCommandsGit
-    dotnet test
-    ```
+```sh
+cd TestCommandsGit
+dotnet test
+```
 
 Estos tests aseguran que cada comando funciona como se espera y ayudan a mantener la estabilidad del código al detectar posibles errores durante el desarrollo.
