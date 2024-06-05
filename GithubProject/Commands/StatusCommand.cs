@@ -5,9 +5,10 @@ namespace GithubProject.Commands
 {
     public class StatusCommand(Repository repository) : ICommand
     {
+        private readonly Repository _repository = repository;
         public void Execute()
         {
-            repository.Status();
+            _repository.Status();
         }
     }
 }

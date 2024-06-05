@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GithubProject", "GithubProject\GithubProject.csproj", "{C3632265-5174-4737-BFF9-96E60F989793}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCommandsGit", "TestCommandsGit\TestCommandsGit.csproj", "{B90D9100-93F8-470D-906C-9B065F8B2F63}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{C3632265-5174-4737-BFF9-96E60F989793}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3632265-5174-4737-BFF9-96E60F989793}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3632265-5174-4737-BFF9-96E60F989793}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B90D9100-93F8-470D-906C-9B065F8B2F63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B90D9100-93F8-470D-906C-9B065F8B2F63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B90D9100-93F8-470D-906C-9B065F8B2F63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B90D9100-93F8-470D-906C-9B065F8B2F63}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

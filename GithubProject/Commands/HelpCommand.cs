@@ -5,9 +5,10 @@ namespace GithubProject.Commands
 {
     public class HelpCommand(Repository repository) : ICommand
     {
+        private readonly Repository _repository = repository;
         public void Execute()
         {
-            Repository.Help();
+            _repository.Help();
         }
     }
 }

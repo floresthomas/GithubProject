@@ -4,9 +4,13 @@ namespace GithubProject.Services
 {
     public class Repository
     {
-        private List<string> stagingArea = [];
-        private List<Commit> localsCommits = [];
-        private List<Commit> remoteCommits = [];
+        private List<string> stagingArea = new List<string>();
+        private List<Commit> localsCommits = new List<Commit>();
+        private List<Commit> remoteCommits = new List<Commit>();
+
+        public IReadOnlyList<string> StagingArea => stagingArea.AsReadOnly();
+        public IReadOnlyList<Commit> LocalCommits => localsCommits.AsReadOnly();
+        public IReadOnlyList<Commit> RemoteCommits => remoteCommits.AsReadOnly();
 
         public void Add(string fileName)
         {
@@ -123,7 +127,7 @@ namespace GithubProject.Services
             }
         }
 
-        public static void Help()
+        public void Help()
         {
             Console.WriteLine("Available commands");
             Console.WriteLine("git add <file_name> - Adds a file to the staging area");
