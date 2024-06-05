@@ -15,7 +15,7 @@ Este proyecto es una aplicación de consola que simula algunos de los comandos b
 - **git help**: Muestra la lista de comandos disponibles.
 - **git exit**: Sale de la interfaz de Git.
 
-##Funcionalidades adicionales
+## Funcionalidades adicionales
 
 ### Comando `git revert`
 
