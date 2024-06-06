@@ -12,10 +12,13 @@ namespace GithubProject.Services
         public IReadOnlyList<Commit> LocalCommits => localsCommits.AsReadOnly();
         public IReadOnlyList<Commit> RemoteCommits => remoteCommits.AsReadOnly();
 
-        public void Add(string fileName)
+        public void Add(IEnumerable<string> fileNames)
         {
-            stagingArea.Add(fileName);
-            Console.WriteLine($"File {fileName} added to staging area");
+            foreach (var fileName in fileNames)
+            {
+                stagingArea.Add(fileName);
+                Console.WriteLine($"File {fileName} added to staging area");
+            }
         }
 
         public void Commit(string message)

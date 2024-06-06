@@ -14,7 +14,7 @@ while (conditional != "exit")
     Console.Write("> ");
     string[] commands = Console.ReadLine().Split(' ');
 
-    if (commands.Length < 2 || !commands[0].Equals("git", StringComparison.CurrentCultureIgnoreCase))
+    if (!IsValidCommand(commands))
     {
         Console.WriteLine("Error: Command must start with 'git'. Type 'git help' for a list of commands.");
         continue;
@@ -28,7 +28,7 @@ while (conditional != "exit")
         case "add":
             if (commands.Length > 2)
             {
-                command = new AddCommand(repository, commands[2]);
+                command = new AddCommand(repository, commands.Skip(2));
             }
             else
             {
@@ -69,6 +69,11 @@ while (conditional != "exit")
     };
 
     command?.Execute();
+
+    static bool IsValidCommand(string[] commands)
+    {
+        return commands.Length >= 2 && commands[0].Equals("git", StringComparison.CurrentCultureIgnoreCase);
+    }
 }
 
 Console.WriteLine("Exiting the application...");
