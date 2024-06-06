@@ -61,10 +61,23 @@ namespace TestCommandsGit
             using (var sw = new StringWriter())
             {
                 Console.SetOut(sw);
+
+                var fileName = "test.txt";
+                _repository.Add(fileName);
+
+                var commitMessage = "Status commit";
+                var commitCommand = new CommitCommand(_repository, commitMessage);
+                commitCommand.Execute();
+
                 var statusCommand = new StatusCommand(_repository);
                 statusCommand.Execute();
+
                 var result = sw.ToString().Trim();
+
                 Assert.Contains("On branch main", result);
+                Assert.Contains("No changes added to commit", result);
+                Assert.Contains("Changes not yet pushed:", result);
+                Assert.Contains($"commit: {commitMessage}", result);
             }
         }
 
